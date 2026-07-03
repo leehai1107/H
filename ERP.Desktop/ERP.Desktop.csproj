@@ -8,4 +8,29 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.11" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="6.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
+    <PackageReference Include="Serilog" Version="4.3.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.Application\ERP.Application.csproj" />
+    <ProjectReference Include="..\ERP.Infrastructure\ERP.Infrastructure.csproj" />
+    <ProjectReference Include="..\ERP.Shared\ERP.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Icons\" />
+    <Folder Include="Styles\" />
+    <Folder Include="Themes\" />
+    <Folder Include="Resources\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

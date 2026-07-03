@@ -5,9 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ERP.Desktop"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:controls="clr-namespace:ERP.Desktop.Controls.Layout"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="55"/>
+
+            <RowDefinition Height="*"/>
+
+            <RowDefinition Height="28"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="220"/>
+
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
 
     </Grid>
 </mah:MetroWindow>
