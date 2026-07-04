@@ -29,8 +29,6 @@
     <Folder Include="Icons\" />
     <Folder Include="Styles\" />
     <Folder Include="Themes\" />
-    <Folder Include="Resources\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>

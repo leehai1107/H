@@ -7,7 +7,7 @@
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:controls="clr-namespace:ERP.Desktop.Controls.Layout"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ERP Metal Fabrication" Height="450" Width="800">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -27,6 +27,32 @@
             <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
+        
+        <controls:HeaderControl
+
+            Grid.Row="0"
+
+            Grid.ColumnSpan="2"/>
+        <controls:SidebarControl
+
+            Grid.Row="1"
+
+            Grid.Column="0"/>
+        <Border
+    Grid.Row="1"
+    Grid.Column="1"
+    Background="#F4F6F8">
+
+            <ContentControl
+    Grid.Row="1"
+    Grid.Column="1"
+    Content="{Binding CurrentView}" />
+
+        </Border>
+
+        <controls:StatusBarControl
+    Grid.Row="2"
+    Grid.ColumnSpan="2"/>
 
     </Grid>
 </mah:MetroWindow>
