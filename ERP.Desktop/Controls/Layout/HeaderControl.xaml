@@ -5,8 +5,37 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ERP.Desktop.Controls.Layout"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="55" d:DesignWidth="800">
+    <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="0,0,0,1">
+        <Grid Margin="16,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock FontSize="18" FontWeight="SemiBold" Text="ERP Metal Fabrication"/>
+                <TextBlock Margin="0,2,0,0" Foreground="#6B7280" Text="{Binding CurrentPageContext.HeaderTitle}"/>
+            </StackPanel>
+
+            <ItemsControl Grid.Column="1" VerticalAlignment="Center" ItemsSource="{Binding CurrentPageContext.HeaderActions}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Margin="0,0,8,0"
+                                Width="42"
+                                Height="34"
+                                Content="{Binding Glyph}"
+                                FontSize="14"
+                                Command="{Binding Command}"
+                                ToolTip="{Binding ToolTip}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+    </Border>
 </UserControl>

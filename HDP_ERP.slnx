@@ -1,7 +1,7 @@
 <Solution>
-  <Project Path="D:/HDP/HDP_ERP/ERP.Application/ERP.Application.csproj" />
-  <Project Path="D:/HDP/HDP_ERP/ERP.Desktop/ERP.Desktop.csproj" />
-  <Project Path="D:/HDP/HDP_ERP/ERP.Domain/ERP.Domain.csproj" />
-  <Project Path="D:/HDP/HDP_ERP/ERP.Infrastructure/ERP.Infrastructure.csproj" />
-  <Project Path="D:/HDP/HDP_ERP/ERP.Shared/ERP.Shared.csproj" />
+  <Project Path="ERP.Application/ERP.Application.csproj" />
+  <Project Path="ERP.Desktop/ERP.Desktop.csproj" />
+  <Project Path="ERP.Domain/ERP.Domain.csproj" />
+  <Project Path="ERP.Infrastructure/ERP.Infrastructure.csproj" />
+  <Project Path="ERP.Shared/ERP.Shared.csproj" />
 </Solution>

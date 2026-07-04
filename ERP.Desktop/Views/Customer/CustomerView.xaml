@@ -6,7 +6,72 @@
              xmlns:local="clr-namespace:ERP.Desktop.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Background="#F4F6F8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Margin="24,24,24,12" Background="White" CornerRadius="12" Padding="20">
+            <StackPanel>
+                <TextBlock FontSize="26" FontWeight="SemiBold" Text="Customer"/>
+                <TextBlock Margin="0,6,0,0" Foreground="#667085" Text="Danh sách khách hàng và tìm kiếm nhanh."/>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" Margin="24,0,24,12" Background="White" CornerRadius="12" Padding="16">
+            <DockPanel LastChildFill="True">
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border Margin="12,0,0,0" Background="#EEF2FF" CornerRadius="10" Padding="12,8">
+                        <StackPanel>
+                            <TextBlock FontSize="20" FontWeight="Bold" Text="{Binding TotalCustomers}"/>
+                            <TextBlock Foreground="#667085" Text="Tổng"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Margin="12,0,0,0" Background="#ECFDF3" CornerRadius="10" Padding="12,8">
+                        <StackPanel>
+                            <TextBlock FontSize="20" FontWeight="Bold" Text="{Binding ActiveCustomers}"/>
+                            <TextBlock Foreground="#667085" Text="Đang hoạt động"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBox Width="320"
+                             Height="36"
+                             VerticalContentAlignment="Center"
+                             Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                             ToolTip="Tìm theo mã, tên, điện thoại hoặc email"/>
+
+                    <Button Margin="12,0,0,0"
+                            Padding="16,8"
+                            Content="Clear"
+                            Command="{Binding ClearSearchCommand}"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <Border Grid.Row="2" Margin="24,0,24,24" Background="White" CornerRadius="12" Padding="12">
+            <DataGrid ItemsSource="{Binding CustomersView}"
+                      SelectedItem="{Binding SelectedCustomer}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      HeadersVisibility="Column"
+                      GridLinesVisibility="Horizontal"
+                      Background="White"
+                      BorderThickness="0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mã" Binding="{Binding Code}" Width="120"/>
+                    <DataGridTextColumn Header="Tên khách hàng" Binding="{Binding Name}" Width="*"/>
+                    <DataGridTextColumn Header="Điện thoại" Binding="{Binding Phone}" Width="150"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="200"/>
+                    <DataGridTextColumn Header="Địa chỉ" Binding="{Binding Address}" Width="220"/>
+                    <DataGridCheckBoxColumn Header="Hoạt động" Binding="{Binding IsActive}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
     </Grid>
 </UserControl>

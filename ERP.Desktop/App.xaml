@@ -24,6 +24,26 @@
                 <views:DashboardView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type vm:CustomerViewModel}">
+                <views:CustomerView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:InventoryViewModel}">
+                <views:InventoryView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:ProductionViewModel}">
+                <views:ProductionView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:PurchaseViewModel}">
+                <views:PurchaseView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+                <views:SettingsView/>
+            </DataTemplate>
+
         </ResourceDictionary>
 
     </Application.Resources>
